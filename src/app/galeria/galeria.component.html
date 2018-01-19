@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-sm-2" style="margin-top: 10px"
+    *ngFor="let usuario of usuarios">
+    <div class="card">
+      <img class="card-img-top" src="https://randomuser.me/api/portraits/men/{{usuario.id}}.jpg" />
+
+      <div class="card-body">
+        <h5 class="card-title">{{usuario.nome}}</h5>
+        <a href="javascript:;" class="btn btn-primary"
+          (click)="selecionando(usuario)">+ Amigo</a>
+      </div>
+    </div>
+  </div>
+</div>

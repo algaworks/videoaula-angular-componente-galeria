@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Estrutura de um componente</h1>
+
+  <br/>
+
+  <div class="row">
+    <div class="col-sm-2 offset-sm-5">
+      <div class="card"
+        *ngIf="usuarioSelecionado" >
+        <img class="card-img-top" src="https://randomuser.me/api/portraits/men/{{usuarioSelecionado.id}}.jpg" />
+
+        <div class="card-body">
+          <h5 class="card-title">{{usuarioSelecionado.nome}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <app-galeria [usuarios]="listaUsuarios"
+    (selecionado)="usuarioSelecionado = $event"></app-galeria>
+</div>
